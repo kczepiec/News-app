@@ -30,21 +30,77 @@ struct ContentView : View {
                 ScrollView {
                     VStack (alignment: .leading) {
                         Text("Trending")
-                        HStack {
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
-                            Text("Group 1")
+                        HStack (spacing: 20) {
+                            VStack {
+                                Image("ice")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text("Ice")
+                                    .frame(width: 50)
+                                
+                            }
+                            VStack {
+                                Image("water")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text("Water")
+                                    .frame(width: 50)
+                                
+                            }
+                            VStack {
+                                Image("ice")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text("Ice Ideology")
+                                    .frame(width: 50)
+                                
+                            }
+                            VStack {
+                                Image("theguy")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text("Fishing")
+                                    .frame(width: 50)
+                                
+                            }
+                            VStack {
+                                Image("water")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text("Fishing")
+                                    .frame(width: 50)
+                                
+                            }
+                            VStack {
+                                Image("ice")
+                                    .resizable()
+                                    .clipShape(Circle())
+                                    .frame(width: 50, height: 50)
+                                    .clipped()
+                                
+                                Text("Ski")
+                                    .frame(width: 50)
+                                
+                            }
                         }
                     }
                     
-                }.frame(height: 100)
+                }.frame(height: 120).padding(.trailing, -20)
                 
                 ForEach(posts.identified(by: \.id)) { post in
                     PostView(post: post)
