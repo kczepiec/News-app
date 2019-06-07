@@ -31,72 +31,14 @@ struct ContentView : View {
                     VStack (alignment: .leading) {
                         Text("Trending")
                         HStack (spacing: 20) {
-                            VStack {
-                                Image("ice")
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                
-                                Text("Ice")
-                                    .frame(width: 50)
-                                
-                            }
-                            VStack {
-                                Image("water")
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                
-                                Text("Water")
-                                    .frame(width: 50)
-                                
-                            }
-                            VStack {
-                                Image("ice")
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                
-                                Text("Ice Ideology")
-                                    .frame(width: 50)
-                                
-                            }
-                            VStack {
-                                Image("theguy")
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                
-                                Text("Fishing")
-                                    .frame(width: 50)
-                                
-                            }
-                            VStack {
-                                Image("water")
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                
-                                Text("Fishing")
-                                    .frame(width: 50)
-                                
-                            }
-                            VStack {
-                                Image("ice")
-                                    .resizable()
-                                    .clipShape(Circle())
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                
-                                Text("Ski")
-                                    .frame(width: 50)
-                                
-                            }
+                            CategoryView()
+                            CategoryView()
+                            CategoryView()
+                            CategoryView()
+                            CategoryView()
+                            CategoryView()
+                            CategoryView()
+                            CategoryView()
                         }
                     }
                     
@@ -107,6 +49,22 @@ struct ContentView : View {
                 }
                 
             }.navigationBarTitle(Text("News"))
+        }
+    }
+}
+
+struct CategoryView: View {
+    var body: some View {
+        VStack {
+            Image("ice")
+                .resizable()
+                .clipShape(Circle())
+                .frame(width: 50, height: 50)
+                .clipped()
+            
+            Text("Ice")
+                .frame(width: 50)
+            
         }
     }
 }
